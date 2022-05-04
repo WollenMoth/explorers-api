@@ -46,6 +46,50 @@ const prisma = new PrismaClient();
         console.log("Create 4 explorers:");
         for (const explorer of [woopa, woopa1, woopa2, woopa3])
             console.log(explorer);
+
+        const student1 = await prisma.student.upsert({
+            where: { name: "Student 1" },
+            update: {},
+            create: {
+                name: "Student 1",
+                lang: "Java",
+                missionCommander: "Fernanda Ochoa",
+            },
+        });
+
+        const student2 = await prisma.student.upsert({
+            where: { name: "Student 2" },
+            update: {},
+            create: {
+                name: "Student 2",
+                lang: "JavaScript",
+                missionCommander: "Carlo Gilmar",
+            },
+        });
+
+        const student3 = await prisma.student.upsert({
+            where: { name: "Student 3" },
+            update: {},
+            create: {
+                name: "Student 3",
+                lang: "Java",
+                missionCommander: "Fernanda Ochoa",
+            },
+        });
+
+        const student4 = await prisma.student.upsert({
+            where: { name: "Student 4" },
+            update: {},
+            create: {
+                name: "Student 4",
+                lang: "JavaScript",
+                missionCommander: "Carlo Gilmar",
+            },
+        });
+
+        console.log("Create 4 students:");
+        for (const student of [student1, student2, student3, student4])
+            console.log(student);
     } catch (e) {
         console.error(e);
         process.exit(1);
