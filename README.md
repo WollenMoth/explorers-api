@@ -51,3 +51,61 @@ Actualizar explorer por su id.
 `localhost:3000/explorers/:id`
 
 Eliminar explorer por su id.
+
+# Students API
+
+API de los Students de Launch X con conexión a base de datos PostgreSQL.
+
+## GET /students
+
+`localhost:3000/students`
+
+Obtener la lista completa de students.
+
+## GET /students/:id
+
+`localhost:3000/students/:id`
+
+Obtener student por su id.
+
+## POST /students
+
+`localhost:3000/students`
+
+Crear un nuevo student.
+
+### BODY raw
+
+```
+{
+    "name": "name",
+    "lang": "lang",
+    "missionCommander": "missionCommander",
+    "enrrolments": 0,
+    "hasCertification": false
+}
+```
+
+## PUT /students/:id
+
+`localhost:3000/students/:id`
+
+Actualizar student por su id.
+
+### BODY raw
+
+```
+{
+    "name": "name",
+    "lang": "lang",
+    "missionCommander": "missionCommander",
+    "enrrolments": 0,
+    "hasCertification": false
+}
+```
+
+## DEL /students/:id
+
+`localhost:3000/students/:id`
+
+Eliminar student por su id.
