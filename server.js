@@ -27,7 +27,7 @@ app.post("/explorers", async (req, res) => {
     const explorer = { ...req.body };
     const message = "Explorer creado.";
     await prisma.explorer.create({ data: explorer });
-    res.json({ message });
+    res.status(201).json({ message });
 });
 
 app.put("/explorers/:id", async (req, res) => {
@@ -63,7 +63,7 @@ app.post("/students", async (req, res) => {
     const student = { ...req.body };
     const message = "Student creado.";
     await prisma.student.create({ data: student });
-    res.json({ message });
+    res.status(201).json({ message });
 });
 
 app.put("/students/:id", async (req, res) => {
