@@ -83,7 +83,7 @@ Crear un nuevo student.
     "name": "name",
     "lang": "lang",
     "missionCommander": "missionCommander",
-    "enrrolments": 0,
+    "enrollments": 0,
     "hasCertification": false
 }
 ```
@@ -101,7 +101,7 @@ Actualizar student por su id.
     "name": "name",
     "lang": "lang",
     "missionCommander": "missionCommander",
-    "enrrolments": 0,
+    "enrollments": 0,
     "hasCertification": false
 }
 ```
