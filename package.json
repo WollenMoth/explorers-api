@@ -1,4 +1,24 @@
 {
+  "name": "explorers-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "linter": "eslint .",
+    "linter-fix": "eslint --fix ."
+  },
+  "author": "wollenmoth",
+  "license": "ISC",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WollenMoth/explorers-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WollenMoth/explorers-api/issues"
+  },
+  "homepage": "https://github.com/WollenMoth/explorers-api#readme",
   "devDependencies": {
     "eslint": "^8.14.0",
     "prisma": "^3.13.0"
