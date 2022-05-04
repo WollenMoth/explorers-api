@@ -1,6 +1,6 @@
 # Explorers API
 
-API de los Explorers de Launch X que con conexión a base de datos PostgreSQL.
+API de los Explorers de Launch X con conexión a base de datos PostgreSQL.
 
 ## GET /explorers
 
