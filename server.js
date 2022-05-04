@@ -52,6 +52,42 @@ app.delete("/explorers/:id", async (req, res) => {
     res.json({ message });
 });
 
+app.get("/students", async (req, res) => {
+    const allStudents = await prisma.student.findMany({});
+    res.json(allStudents);
+});
+
+app.get("/students/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+    const student = await prisma.student.findUnique({ where: { id: id } });
+    res.json(student);
+});
+
+app.post("/students", async (req, res) => {
+    const student = { ...req.body };
+    const message = "Student creado.";
+    await prisma.student.create({ data: student });
+    res.json({ message });
+});
+
+app.put("/students/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+    const student = { ...req.body };
+    const message = "Student actualizado.";
+    await prisma.student.update({
+        where: { id: id },
+        data: student,
+    });
+    res.json({ message });
+});
+
+app.delete("/students/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+    const message = "Student eliminado.";
+    await prisma.student.delete({ where: { id: id } });
+    res.json({ message });
+});
+
 app.listen(port, () => {
     console.log(`Listening to resquests at http://localhost:${port}`);
 });
