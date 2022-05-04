@@ -45,6 +45,13 @@ app.put("/explorers/:id", async (req, res) => {
     res.json({ message });
 });
 
+app.delete("/explorers/:id", async (req, res) => {
+    const { id } = req.params;
+    const message = "Explorer eliminado.";
+    await prisma.explorer.delete({ where: { id: parseInt(id) } });
+    res.json({ message });
+});
+
 app.listen(port, () => {
     console.log(`Listening to resquests at http://localhost:${port}`);
 });
