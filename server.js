@@ -25,7 +25,7 @@ app.get("/explorers/:id", async (req, res) => {
 
 app.post("/explorers", async (req, res) => {
     const explorer = { ...req.body };
-    const message = "Explorer creado.";
+    const message = "Explorer created";
     await prisma.explorer.create({ data: explorer });
     res.status(201).json({ message });
 });
@@ -33,7 +33,7 @@ app.post("/explorers", async (req, res) => {
 app.put("/explorers/:id", async (req, res) => {
     const id = parseInt(req.params.id);
     const explorer = { ...req.body };
-    const message = "Explorer actualizado.";
+    const message = "Explorer updated";
     await prisma.explorer.update({
         where: { id: id },
         data: explorer,
@@ -43,7 +43,7 @@ app.put("/explorers/:id", async (req, res) => {
 
 app.delete("/explorers/:id", async (req, res) => {
     const id = parseInt(req.params.id);
-    const message = "Explorer eliminado.";
+    const message = "Explorer deleted";
     await prisma.explorer.delete({ where: { id: id } });
     res.json({ message });
 });
@@ -61,7 +61,7 @@ app.get("/students/:id", async (req, res) => {
 
 app.post("/students", async (req, res) => {
     const student = { ...req.body };
-    const message = "Student creado.";
+    const message = "Student created";
     await prisma.student.create({ data: student });
     res.status(201).json({ message });
 });
@@ -69,7 +69,7 @@ app.post("/students", async (req, res) => {
 app.put("/students/:id", async (req, res) => {
     const id = parseInt(req.params.id);
     const student = { ...req.body };
-    const message = "Student actualizado.";
+    const message = "Student updated";
     await prisma.student.update({
         where: { id: id },
         data: student,
@@ -79,7 +79,7 @@ app.put("/students/:id", async (req, res) => {
 
 app.delete("/students/:id", async (req, res) => {
     const id = parseInt(req.params.id);
-    const message = "Student eliminado.";
+    const message = "Student deleted";
     await prisma.student.delete({ where: { id: id } });
     res.json({ message });
 });
