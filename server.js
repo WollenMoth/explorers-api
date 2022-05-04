@@ -85,5 +85,5 @@ app.delete("/students/:id", async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Listening to resquests at http://localhost:${port}`);
+    console.log(`Listening to requests at http://localhost:${port}`);
 });
