@@ -26,7 +26,8 @@ Crear un nuevo explorer.
 {
     "name": "name",
     "username": "username",
-    "mission": "mission"
+    "mission": "mission",
+    "azureCertification": false
 }
 ```
 
@@ -42,7 +43,8 @@ Actualizar explorer por su id.
 {
     "name": "name",
     "username": "username",
-    "mission": "mission"
+    "mission": "mission",
+    "azureCertification": false
 }
 ```
 
