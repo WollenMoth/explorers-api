@@ -3,11 +3,11 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
-const corsOptions = {
-    origin: "http://localhost:3000",
-};
+const origin = process.env.ORIGIN || `http://localhost:${port}`;
+
+const corsOptions = { origin };
 
 const prisma = new PrismaClient();
 
