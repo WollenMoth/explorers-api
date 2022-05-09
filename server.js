@@ -5,9 +5,7 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT;
 
-const origin = process.env.ORIGIN;
-
-const corsOptions = { origin };
+const corsOptions = { origin: true };
 
 const prisma = new PrismaClient();
 
