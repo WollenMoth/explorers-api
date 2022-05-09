@@ -3,10 +3,10 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const port = 3000;
+const port = 8000;
 
 const corsOptions = {
-    origin: "http://localhost:8081",
+    origin: "http://localhost:3000",
 };
 
 const prisma = new PrismaClient();
