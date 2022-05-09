@@ -4,19 +4,19 @@ API de los Explorers de Launch X con conexión a base de datos PostgreSQL.
 
 ## GET /explorers
 
-`localhost:3000/explorers`
+`localhost:8000/explorers`
 
 Obtener la lista completa de explorers.
 
 ## GET /explorers/:id
 
-`localhost:3000/explorers/:id`
+`localhost:8000/explorers/:id`
 
 Obtener explorer por su id.
 
 ## POST /explorers
 
-`localhost:3000/explorers`
+`localhost:8000/explorers`
 
 Crear un nuevo explorer.
 
@@ -33,7 +33,7 @@ Crear un nuevo explorer.
 
 ## PUT /explorers/:id
 
-`localhost:3000/explorers/:id`
+`localhost:8000/explorers/:id`
 
 Actualizar explorer por su id.
 
@@ -50,7 +50,7 @@ Actualizar explorer por su id.
 
 ## DEL /explorers/:id
 
-`localhost:3000/explorers/:id`
+`localhost:8000/explorers/:id`
 
 Eliminar explorer por su id.
 
@@ -60,19 +60,19 @@ API de los Students de Launch X con conexión a base de datos PostgreSQL.
 
 ## GET /students
 
-`localhost:3000/students`
+`localhost:8000/students`
 
 Obtener la lista completa de students.
 
 ## GET /students/:id
 
-`localhost:3000/students/:id`
+`localhost:8000/students/:id`
 
 Obtener student por su id.
 
 ## POST /students
 
-`localhost:3000/students`
+`localhost:8000/students`
 
 Crear un nuevo student.
 
@@ -90,7 +90,7 @@ Crear un nuevo student.
 
 ## PUT /students/:id
 
-`localhost:3000/students/:id`
+`localhost:8000/students/:id`
 
 Actualizar student por su id.
 
@@ -108,6 +108,6 @@ Actualizar student por su id.
 
 ## DEL /students/:id
 
-`localhost:3000/students/:id`
+`localhost:8000/students/:id`
 
 Eliminar student por su id.
