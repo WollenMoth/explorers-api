@@ -132,6 +132,65 @@ app.delete("/students/:id", async (req, res) => {
     }
 });
 
+app.get("/commanders", async (req, res) => {
+    const allMissionCommanders = await prisma.missionCommander.findMany({});
+    res.json(allMissionCommanders);
+});
+
+app.get("/commanders/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+    const missionCommander = await prisma.missionCommander.findUnique({
+        where: { id: id },
+    });
+    res.json(missionCommander);
+});
+
+app.post("/commanders", async (req, res) => {
+    try {
+        const missionCommander = { ...req.body };
+        const message = "Mission Commander created";
+        await prisma.missionCommander.create({ data: missionCommander });
+        res.status(201).json({ message });
+    } catch (error) {
+        if (error.code === "P2002")
+            res.status(400).json({
+                detail: "Nombre ya está en uso, elije otro",
+            });
+    }
+});
+
+app.put("/commanders/:id", async (req, res) => {
+    try {
+        const id = parseInt(req.params.id);
+        const missionCommander = { ...req.body };
+        const message = "Mission Commander updated";
+        await prisma.missionCommander.update({
+            where: { id: id },
+            data: missionCommander,
+        });
+        res.json({ message });
+    } catch (error) {
+        if (error.code === "P2002")
+            res.status(400).json({
+                detail: "Nombre ya está en uso, elije otro",
+            });
+    }
+});
+
+app.delete("/commanders/:id", async (req, res) => {
+    try {
+        const id = parseInt(req.params.id);
+        const message = "Mission commander deleted";
+        await prisma.missionCommander.delete({ where: { id: id } });
+        res.json({ message });
+    } catch (error) {
+        if (error.code === "P2025")
+            res.status(400).json({
+                detail: "Mission Commander no existente",
+            });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Listening to requests at http://localhost:${port}`);
 });
