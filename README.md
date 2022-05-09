@@ -111,3 +111,61 @@ Actualizar student por su id.
 `localhost:8000/students/:id`
 
 Eliminar student por su id.
+
+# Mission Commanders API
+
+API de los Mission Commanders de Launch X con conexión a base de datos PostgreSQL.
+
+## GET /commanders
+
+`localhost:8000/commanders`
+
+Obtener la lista completa de mission commanders.
+
+## GET /commanders/:id
+
+`localhost:8000/commanders/:id`
+
+Obtener mission commander por su id.
+
+## POST /commanders
+
+`localhost:8000/commanders`
+
+Crear un nuevo mission commander.
+
+### BODY raw
+
+```
+{
+    "name": "name",
+    "username": "username",
+    "mainStack": "mainStack",
+    "currentEnrollment": false,
+    "hasAzureCertification": false
+}
+```
+
+## PUT /commanders/:id
+
+`localhost:8000/commanders/:id`
+
+Actualizar mission commander por su id.
+
+### BODY raw
+
+```
+{
+    "name": "name",
+    "username": "username",
+    "mainStack": "mainStack",
+    "currentEnrollment": false,
+    "hasAzureCertification": false
+}
+```
+
+## DEL /commanders/:id
+
+`localhost:8000/commanders/:id`
+
+Eliminar mission commander por su id.
