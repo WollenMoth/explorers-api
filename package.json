@@ -9,7 +9,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "migrate": "npx prisma migrate dev --name init",
+    "build": "prisma generate",
+    "migrate": "prisma migrate dev --name init",
     "seed": "node prisma/seed.js",
     "linter": "eslint .",
     "linter-fix": "eslint --fix ."
@@ -26,12 +27,12 @@
   },
   "homepage": "https://github.com/WollenMoth/explorers-api#readme",
   "devDependencies": {
-    "eslint": "^8.14.0",
-    "prisma": "^3.13.0"
+    "eslint": "^8.14.0"
   },
   "dependencies": {
     "@prisma/client": "^3.13.0",
     "cors": "^2.8.5",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "prisma": "^3.13.0"
   }
 }
