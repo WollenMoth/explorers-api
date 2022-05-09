@@ -90,6 +90,30 @@ const prisma = new PrismaClient();
         console.log("Create 4 students:");
         for (const student of [student1, student2, student3, student4])
             console.log(student);
+
+        const carlo = await prisma.missionCommander.upsert({
+            where: { name: "Carlo Gilmar" },
+            update: {},
+            create: {
+                name: "Carlo Gilmar",
+                username: "carlogilmar",
+                mainStack: "JavaScript",
+            },
+        });
+
+        const fernanda = await prisma.missionCommander.upsert({
+            where: { name: "Fernanda Ochoa" },
+            update: {},
+            create: {
+                name: "Fernanda Ochoa",
+                username: "fernandaochoa",
+                mainStack: "Java",
+            },
+        });
+
+        console.log("Create 2 mission commanders:");
+        for (const missionCommander of [carlo, fernanda])
+            console.log(missionCommander);
     } catch (e) {
         console.error(e);
         process.exit(1);
